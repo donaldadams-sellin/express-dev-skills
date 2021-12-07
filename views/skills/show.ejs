@@ -1,8 +1,16 @@
 <%- include('../partials/header') %>
 
     <h3>This is the <%=skill.skill %> page</h3>
-    <form action="<% skill.id %>?_method=DELETE" method="POST">
-        <button type="submit" class="btn btn-danger">Delete Skill</button>
-    </form>
+    <br>
+    <div class="btn-toolbar">
+        <div class="btn-group me-2">
+            <a class = "btn btn-dark" href="/skills/<%= skill.id %>/edit">Edit</a>
+        </div>  
+        <div class="btn-group me-2">
+            <form action="<% skill.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger">Delete Skill</button>
+            </form>
+        </div>  
+    </div>    
     
 <%- include('../partials/footer') %>
